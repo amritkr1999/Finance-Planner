@@ -2,12 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router";
 
 const Dashboard = () => {
+  const navigate = useNavigate();  // Initialize navigation
   console.log("amrit ka dashboard");
-  // const navigate = useNavigate();
+
   return (
     <div>
       <h1>Welcome to the Dashboard</h1>
-      {/* <button
+      <button
         onClick={() => {
           navigate("/profile");
         }}
@@ -27,7 +28,7 @@ const Dashboard = () => {
         }}
       >
         SWP Calculator
-      </button> */}
+      </button>
     </div>
   );
 };
