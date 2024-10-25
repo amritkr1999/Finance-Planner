@@ -1,21 +1,33 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-// import profile from "./components/Profile";         // Assuming you have a Profile component
-import sipCalculator from "./components/sipCalculator"; // Assuming you have a SIP Calculator component
-import swpCalculator from "./components/swpCalculator";
 
 function App() {
+  // 
   return (
-    
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Dashboard />} />
-          <Route path="/profile" element={<profile />} />
-        <Route path="/sip-calculator" element={<sipCalculator />} />
-        <Route path="/swp-calculator" element={<swpCalculator />} />
-        </Routes>
-      </BrowserRouter>
-    
+    <div>
+      <h1>Welcome to the Dashboard</h1>
+      <button
+        onClick={() => {
+          // navigate("/profile");
+        }}
+      >
+        Profile
+      </button>
+      <button
+        onClick={() => {
+          // navigate("/sip-calculator");
+        }}
+      >
+        SIP Calculator
+      </button>
+      <button
+        onClick={() => {
+          // navigate("/swp-calculator");
+        }}
+      >
+        SWP Calculator
+      </button>
+    </div>
   );
 }
 
