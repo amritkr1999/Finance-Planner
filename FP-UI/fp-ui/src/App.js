@@ -1,34 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
+import Profile from "./components/Profile";
 
 function App() {
   // 
-  return (
-    <div>
-      <h1>Welcome to the Dashboard</h1>
-      <button
-        onClick={() => {
-          // navigate("/profile");
-        }}
-      >
-        Profile
-      </button>
-      <button
-        onClick={() => {
-          // navigate("/sip-calculator");
-        }}
-      >
-        SIP Calculator
-      </button>
-      <button
-        onClick={() => {
-          // navigate("/swp-calculator");
-        }}
-      >
-        SWP Calculator
-      </button>
-    </div>
+  return(
+    <BrowserRouter>
+    <div>Welcome to HOME PAGE</div>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/profile" element={<Profile />} />
+      {/* Add a NotFound route if needed */}
+    </Routes>
+  </BrowserRouter>
   );
-}
+};
 
 export default App;
